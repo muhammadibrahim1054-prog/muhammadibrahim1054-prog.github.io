@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Boolean Algebra Through Set Theory · Muhammad Ibrahim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <a class="nav-logo" href="../index.html">MI</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <article class="post-page">
+    <div class="post-page-meta">
+      <span class="post-card-cat">Mathematics</span>
+      <span class="post-tag">Featured</span>
+      <span class="post-card-date">28 March 2026</span>
+    </div>
+    <h1>Understanding Boolean Algebra Through Set Theory</h1>
+
+    <div class="post-body">
+      <p>
+        Boolean algebra and set theory share a profound relationship — one that reveals how mathematics finds unity in abstraction. Today, I want to walk through one of my favourite simplification problems: <code>(A ∪ B) ∩ (A ∪ B')</code>, and why its answer tells us something beautiful.
+      </p>
+
+      <h2>The Problem</h2>
+      <p>
+        We want to simplify <code>(A ∪ B) ∩ (A ∪ B')</code>. At first glance, this looks complex. Two union operations, then an intersection — it's easy to feel lost. But there's a simple path through.
+      </p>
+
+      <h2>Step 1: Apply the Distributive Law</h2>
+      <p>
+        The distributive law in set theory tells us:
+      </p>
+      <blockquote>
+        A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+      </blockquote>
+      <p>
+        We can apply this in reverse. Notice that <code>(A ∪ B) ∩ (A ∪ B')</code> fits the right-hand side pattern where <code>C = B'</code>. So:
+      </p>
+      <p>
+        <code>(A ∪ B) ∩ (A ∪ B') = A ∪ (B ∩ B')</code>
+      </p>
+
+      <h2>Step 2: Apply the Complement Law</h2>
+      <p>
+        By the complement law, any set intersected with its own complement gives the empty set:
+      </p>
+      <blockquote>B ∩ B' = ∅</blockquote>
+      <p>
+        So our expression becomes:
+      </p>
+      <p><code>A ∪ ∅</code></p>
+
+      <h2>Step 3: Apply the Identity Law</h2>
+      <p>
+        Finally, any set united with the empty set simply returns that set:
+      </p>
+      <blockquote>A ∪ ∅ = A</blockquote>
+      <p>
+        And that's it. <strong>The entire expression simplifies to just A.</strong>
+      </p>
+
+      <h2>Why Does This Matter?</h2>
+      <p>
+        What I find beautiful here is that all the complexity — the B's, the B primes, the unions and intersections — ultimately cancels out. The answer was hiding in plain sight.
+      </p>
+      <p>
+        This is what mathematics does at its best: it peels back apparent complexity to reveal a simpler truth. In logic design, Boolean simplification like this is the difference between a circuit with ten gates and one with two. In software, it's the difference between a bloated conditional and a single, elegant check.
+      </p>
+      <p>
+        The next time you face a complex expression, remember: the laws aren't just rules to memorise — they're tools for seeing clearly.
+      </p>
+    </div>
+
+    <div class="post-nav">
+      <a href="index.html" class="btn btn-ghost">← All Posts</a>
+      <a href="post-2.html" class="btn btn-outline">Next Post →</a>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">MI</span>
+        <span class="footer-copy">© 2026 Muhammad Ibrahim</span>
+        <a href="../index.html" class="footer-back">← Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("navToggle").addEventListener("click", () => {
+      document.querySelector(".nav-links").classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
