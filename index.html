@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ibrahim · Personal Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">MI</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-tag reveal">Hello, World —</span>
+      <h1 class="hero-title reveal">
+        Muhammad<br />
+        <em>Ibrahim</em>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Developer · Writer · Thinker
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#blog" class="btn btn-primary">Read My Blog</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">A bit about<br /><em>who I am</em></h2>
+          <p>
+            I'm Muhammad Ibrahim — a curious mind at the intersection of technology, ideas, and writing. I believe that good thinking deserves clear expression, and that the best software is written with both precision and purpose.
+          </p>
+          <p>
+            When I'm not building things, I'm exploring concepts in mathematics, computing, and philosophy — then distilling them into weekly posts you can actually understand.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="50">0</span>+
+              <span class="stat-label">Articles Written</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span>+
+              <span class="stat-label">Years Writing</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="12">0</span>+
+              <span class="stat-label">Projects Built</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="portrait-card">
+            <div class="portrait-inner">
+              <div class="portrait-initials">MI</div>
+            </div>
+            <div class="portrait-deco"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title centered">What I <em>work with</em></h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⌨</div>
+          <h3>Development</h3>
+          <p>Building clean, functional software with attention to detail and performance.</p>
+          <div class="skill-tags">
+            <span>Python</span><span>JavaScript</span><span>HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">∑</div>
+          <h3>Mathematics</h3>
+          <p>Set theory, Boolean algebra, logic — finding beauty in abstract structures.</p>
+          <div class="skill-tags">
+            <span>Discrete Math</span><span>Logic</span><span>Analysis</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">✍</div>
+          <h3>Writing</h3>
+          <p>Translating complex ideas into clear, engaging prose for curious readers.</p>
+          <div class="skill-tags">
+            <span>Technical Writing</span><span>Essays</span><span>Blogs</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◉</div>
+          <h3>Problem Solving</h3>
+          <p>Decomposing hard problems systematically and building elegant solutions.</p>
+          <div class="skill-tags">
+            <span>Algorithms</span><span>Research</span><span>Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <div class="section-label">03 / Blog</div>
+      <div class="blog-header">
+        <h2 class="section-title">Weekly <em>Dispatches</em></h2>
+        <p class="blog-sub">Fresh thinking, every week. Ideas from tech, math, and beyond.</p>
+      </div>
+
+      <!-- Featured Post -->
+      <div class="post-featured" id="featuredPost">
+        <div class="post-featured-meta">
+          <span class="post-tag">Featured</span>
+          <span class="post-date" id="featuredDate"></span>
+        </div>
+        <h3 id="featuredTitle">Understanding Boolean Algebra Through Set Theory</h3>
+        <p id="featuredExcerpt">
+          Boolean algebra and set theory share a profound relationship. When we simplify (A ∪ B) ∩ (A ∪ B') using the distributive law, something beautiful emerges — a window into how mathematics finds unity in abstraction...
+        </p>
+        <a href="blog/post-1.html" class="btn btn-primary">Read Article →</a>
+      </div>
+
+      <!-- Post Grid -->
+      <div class="posts-grid" id="postsGrid">
+        <!-- Posts injected by JS -->
+      </div>
+
+      <div class="blog-footer">
+        <a href="blog/index.html" class="btn btn-outline">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">04 / Contact</div>
+      <div class="contact-inner">
+        <h2 class="section-title">Let's <em>connect</em></h2>
+        <p>Have a question, idea, or just want to say hello? My inbox is always open.</p>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            hello@example.com
+          </a>
+          <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+            <span class="contact-icon">⌥</span>
+            GitHub
+          </a>
+          <a href="https://twitter.com/yourusername" class="contact-link" target="_blank">
+            <span class="contact-icon">◈</span>
+            Twitter / X
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">MI</span>
+        <span class="footer-copy">© 2026 Muhammad Ibrahim. Built with care.</span>
+        <a href="#home" class="footer-back">↑ Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
